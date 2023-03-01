@@ -24,6 +24,7 @@ function App() {
         return {
           title: article.title,
           section: article.section,
+          thumbnailImg: article.thumbnailImg,
           subsection: article.subsection,
           publishedDate: article.publishedDate,
           id: article.id

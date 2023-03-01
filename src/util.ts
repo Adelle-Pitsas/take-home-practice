@@ -5,11 +5,14 @@ export const cleanArticles = (data: any) => {
     const filtered = data.results.filter((article : rawData) => {
       return article.title !== ""
     })
+    console.log("util data!", data)
     return filtered.map((article : rawData, index: number) => {
       return {
         title: article.title,
         byline: article.byline,
         abstract: article.abstract,
+        thumbnailImg: article.multimedia[2].url,
+        image1: article.multimedia[0].url,
         section: formatProperNouns(article.section),
         subsection: formatProperNouns(article.subsection),
         publishedDate: getCleanedDate(new Date(article.published_date)),
