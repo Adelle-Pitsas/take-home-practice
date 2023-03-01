@@ -33,6 +33,7 @@ function App() {
     }
   }, [articles])
 
+
   return (
     <div className="App">
       <header>
@@ -40,7 +41,7 @@ function App() {
       </header>
       <Routes>
         <Route path='/' element={<ArticleContainer thumbnails={thumbnails}/>}/>
-        <Route path='/:id' element={<Details /> } />
+        <Route path='/:id' element={<Details articles={articles}/> } />
       </Routes>
     </div>
   );
