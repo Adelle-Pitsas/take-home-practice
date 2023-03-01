@@ -13,7 +13,7 @@ export const cleanArticles = (data: any) => {
         section: article.section,
         subsection: article.subsection,
         publishedDate: article.published_date,
-        updatedData: article.updated_date,
+        updatedDate: article.updated_date,
         url: article.url,
         id: index
       }

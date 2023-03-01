@@ -28,3 +28,23 @@ export interface rawData {
   }[];
   short_url?: string;
 }
+
+export interface cleanedArticle {
+  title: string;
+  byline: string;
+  abstract: string;
+  section: string;
+  subsection: string;
+  publishedDate: string;
+  updatedData: string;
+  url: string;
+  id: number;
+}
+
+export interface cleanThumbnail {
+  title: string;
+  section: string;
+  subsection: string;
+  publishedDate: string;
+  id: number;
+}
