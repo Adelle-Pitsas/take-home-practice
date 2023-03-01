@@ -13,7 +13,7 @@ export const cleanArticles = (data: any) => {
         section: formatProperNouns(article.section),
         subsection: formatProperNouns(article.subsection),
         publishedDate: getCleanedDate(new Date(article.published_date)),
-        updatedDate: article.updated_date,
+        updatedDate: getCleanedDate(new Date(article.updated_date)),
         url: article.url,
         id: index
       }
