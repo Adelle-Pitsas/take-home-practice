@@ -35,7 +35,7 @@ export interface cleanedArticle {
   abstract: string;
   section: string;
   subsection: string;
-  publishedDate: string;
+  publishedDate?: string;
   updatedData: string;
   url: string;
   id: number;
@@ -45,6 +45,6 @@ export interface cleanThumbnail {
   title: string;
   section: string;
   subsection: string;
-  publishedDate: string;
+  publishedDate?: string;
   id: number;
 }
