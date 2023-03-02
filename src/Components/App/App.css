@@ -2,18 +2,36 @@
   text-align: center;
   height: auto;
   width: 100vw;
-  background-image: url('../../Images/background.png');
-  background-repeat: repeat;
+  
+  /* margin-top: 10vh; */
 }
 
 html {
   height: 100vh;
+  background-image: url('../../Images/background.png');
+  background-repeat: repeat;
 }
 
 header {
   background-color: white;
   height: 10vh;
+  width: 100vw;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  position: fixed;
+  border: 2px solid black;
+  z-index: 9999;
+  top: 0;
+}
+
+.title {
+  left: calc(50% - 200px);
+  position: absolute;
+}
+
+input {
+  margin-left: 5%;
+  margin-right: 3%;
+  width: 200px
 }

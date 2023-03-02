@@ -90,17 +90,13 @@ function App() {
   return (
     <div className="App" style={{backgroundImage: `url()${background}`}}>
       <header>
-        <h1>New York Times: World News</h1>
-      </header>
-      <div>
-        <form>
-          <input 
+        <h1 className='title'>New York Times: World News</h1>
+        <input 
             placeholder='Search an article by name'
             value={search}
             onChange={(event) => handleChange(event)}
           />
-        </form>
-      </div>
+      </header>
       <Routes>
         <Route path='/' element={<ArticleContainer thumbnails={thumbnails} getDetails={getDetails}/>}/>
         <Route path='/:id' element={<Details details={details}/> } />

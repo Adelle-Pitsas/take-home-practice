@@ -9,9 +9,9 @@ const Article = ({ thumbnail, getDetails } : {
   return (
     <div className="article" onClick={() => getDetails(thumbnail.id)}>
       <img className="thumbnail-img" src={thumbnail.thumbnailImg}/>
-      <h3>{thumbnail.title}</h3>
-      <h4>{thumbnail.subsection}</h4>
-      <p>{thumbnail.publishedDate}</p>
+      <h3 className="info">{thumbnail.title}</h3>
+      <h4 className="info">{thumbnail.subsection}</h4>
+      <p className="info">Published: {thumbnail.publishedDate}</p>
     </div>
   )
 }
