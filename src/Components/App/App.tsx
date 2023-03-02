@@ -71,18 +71,17 @@ function App() {
   }, [articles])
 
   const handleChange = (event: any) => {
-    console.log("changed")
     setSearch(event.target.value)
   }
 
   useEffect(() => {
     if(search) {
-      console.log(search)
       const searchFilter = allArticles.filter(article => {
         return article.title.toLowerCase().includes(search.toLowerCase())
       })
-      console.log(searchFilter.length)
       setArticles(searchFilter)
+    } else {
+      setArticles(allArticles)
     }
   }, [search])
 
