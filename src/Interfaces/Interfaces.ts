@@ -17,15 +17,15 @@ export interface rawData {
   org_facet?: [];
   per_favet?: [];
   geo_facet?: [];
-  multimedia?: {
-    url?: string;
+  multimedia: {
+    url: string;
     height?: string;
     width?: string;
     type?: string;
     subtype?: string;
     caption?: string;
     copyright?: string
-  }[];
+  }[] | null;
   short_url?: string;
 }
 
@@ -33,6 +33,8 @@ export interface cleanedArticle {
   title: string;
   byline: string;
   abstract: string;
+  thumbnailImg: string;
+  image1: string;
   section: string;
   subsection: string;
   publishedDate?: string;
@@ -44,7 +46,9 @@ export interface cleanedArticle {
 export interface cleanThumbnail {
   title: string;
   section: string;
+  thumbnailImg: string;
   subsection: string;
   publishedDate?: string;
   id: number;
 }
+

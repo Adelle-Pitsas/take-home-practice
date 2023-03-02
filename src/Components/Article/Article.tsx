@@ -1,15 +1,18 @@
 import React from "react";
 import { cleanThumbnail } from "../../Interfaces/Interfaces";
-import { Link } from 'react-router-dom'
+import './Article.css'
 
-const Article = ({ thumbnail } : {thumbnail: cleanThumbnail}) => {
-  console.log(thumbnail)
+const Article = ({ thumbnail, getDetails } : {
+  thumbnail: cleanThumbnail, 
+  getDetails: (id:number)=> void
+}) => {
   return (
-    <Link to={`/${thumbnail.id}`}>
+    <div className="article" onClick={() => getDetails(thumbnail.id)}>
+      <img className="thumbnail-img" src={thumbnail.thumbnailImg}/>
       <h3>{thumbnail.title}</h3>
       <h4>{thumbnail.subsection}</h4>
       <p>{thumbnail.publishedDate}</p>
-    </Link>
+    </div>
   )
 }
 
