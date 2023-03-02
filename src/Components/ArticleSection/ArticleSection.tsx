@@ -1,6 +1,7 @@
 import React from "react";
 import {cleanThumbnail} from '../../Interfaces/Interfaces'
 import Article from '../Article/Article'
+import './ArticleSection.css'
 
 
 const ArticleSection = ({ thumbnails, section, getDetails } : {
@@ -17,7 +18,7 @@ const ArticleSection = ({ thumbnails, section, getDetails } : {
   return(
     <div>
       <h2>{section}</h2>
-      <div>
+      <div className="section-list">
         {sectionList}
       </div>
     </div>

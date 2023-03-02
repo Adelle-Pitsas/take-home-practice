@@ -7,19 +7,30 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 80%;
-  border: 2px solid black
+  height: 70vh;
+  width: 80vw;
+  border: 2px solid rgb(75, 75, 75);
+  background-color: white;
+  padding-bottom: 2%;
+  border-radius: 2px;
+  box-shadow: 0 5px 10px 0px rgb(56, 56, 56);
+}
+
+.details {
+  margin-top: 5%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
 .details-info {
   width: 50%;
-  height: 70%;
   display: flex;
   flex-direction: column;
 }
 
 .article-title {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .article-byline {

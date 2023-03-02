@@ -6,6 +6,7 @@ import Details from "../Details/Details"
 import ArticleContainer from "../ArticleContainer/ArticleContainer"
 import { cleanedArticle, cleanThumbnail } from '../../Interfaces/Interfaces';
 import './App.css';
+import background from '../../Images/background.png'
 
 function App() {
 
@@ -63,9 +64,9 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="App" style={{backgroundImage: `url()${background}`}}>
       <header>
-        <h1>Take Home Scaries</h1>
+        <h1>New York Times: World News</h1>
       </header>
       <Routes>
         <Route path='/' element={<ArticleContainer thumbnails={thumbnails} getDetails={getDetails}/>}/>

@@ -1,6 +1,7 @@
 import React from "react";
 import { cleanThumbnail } from "../../Interfaces/Interfaces";
 import ArticleSection from '../ArticleSection/ArticleSection'
+import './ArticleContainer.css'
 
 const ArticleContainer = ({ thumbnails, getDetails } : {
   thumbnails: cleanThumbnail[], 
@@ -23,7 +24,7 @@ const ArticleContainer = ({ thumbnails, getDetails } : {
   })
 
   return(
-    <div>
+    <div className="article-container">
       {sections}
     </div>
   )
