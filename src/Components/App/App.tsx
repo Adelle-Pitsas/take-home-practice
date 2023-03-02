@@ -14,17 +14,25 @@ function App() {
   let location : any = useLocation()
 
   const [articles, setArticles] = useState<cleanedArticle[]>([])
+  const [ allArticles, setAllArticles ] = useState<cleanedArticle[]>([])
   const [thumbnails, setThumbnails] = useState<cleanThumbnail[]>([])
   const [details, setDetails] = useState<cleanedArticle>()
+  const [ search, setSearch ] = useState<string>("")
 
 
   useEffect(() => {
     getPopArticles()
     .then(data => {
       const cleaned = cleanArticles(data)
-      setArticles(cleanArticles(data))
+      setAllArticles(cleanArticles(data))
     })
   }, [])
+
+  useEffect(() => {
+    if(allArticles) {
+      setArticles(allArticles)
+    }
+  }, [allArticles])
 
   useEffect(() => {
     if(articles) {
@@ -62,11 +70,31 @@ function App() {
     }
   }, [articles])
 
+  const handleChange = (event: any) => {
+    setSearch(event.target.value)
+  }
+
+  useEffect(() => {
+    if(search) {
+      const searchFilter = allArticles.filter(article => {
+        return article.title.toLowerCase().includes(search.toLowerCase())
+      })
+      setArticles(searchFilter)
+    } else {
+      setArticles(allArticles)
+    }
+  }, [search])
+
 
   return (
     <div className="App" style={{backgroundImage: `url()${background}`}}>
       <header>
-        <h1>New York Times: World News</h1>
+        <h1 className='title'>New York Times: World News</h1>
+        <input 
+            placeholder='Search an article by name'
+            value={search}
+            onChange={(event) => handleChange(event)}
+          />
       </header>
       <Routes>
         <Route path='/' element={<ArticleContainer thumbnails={thumbnails} getDetails={getDetails}/>}/>

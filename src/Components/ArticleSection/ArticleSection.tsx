@@ -16,8 +16,8 @@ const ArticleSection = ({ thumbnails, section, getDetails } : {
     />
   })
   return(
-    <div>
-      <h2>{section}</h2>
+    <div className="section">
+      <h2 className="section-header">{section}</h2>
       <div className="section-list">
         {sectionList}
       </div>
