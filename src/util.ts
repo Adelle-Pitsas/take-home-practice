@@ -5,7 +5,6 @@ export const cleanArticles = (data: any) => {
     const filtered = data.results.filter((article : rawData) => {
       return article.title !== ""
     })
-    console.log("util data!", data)
     return filtered.map((article : rawData, index: number) => {
       return {
         title: article.title,
