@@ -3,17 +3,7 @@ import { cleanedArticle } from "../../Interfaces/Interfaces";
 import {useParams, Link} from 'react-router-dom'
 import './Details.css'
 
-const Details = ({ articles } : {articles: cleanedArticle[]}) => {
-
-  const { id } : any = useParams()
-  const [ details, setDetails ] = useState<cleanedArticle>()
-
-  useEffect(() => {
-    const foundDetails = articles.find((article:cleanedArticle) => {
-      return parseInt(id) === article.id})
-      console.log(foundDetails)
-    setDetails(foundDetails)
-  },[])
+const Details = ({ details } : {details: cleanedArticle | undefined}) => {
 
   return (
     <div className="details-container">

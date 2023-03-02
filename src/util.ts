@@ -10,8 +10,8 @@ export const cleanArticles = (data: any) => {
         title: article.title,
         byline: article.byline,
         abstract: article.abstract,
-        thumbnailImg: article.multimedia[2].url,
-        image1: article.multimedia[0].url,
+        thumbnailImg: article.multimedia?.[2].url,
+        image1: article.multimedia?.[0].url,
         section: formatProperNouns(article.section),
         subsection: formatProperNouns(article.subsection),
         publishedDate: getCleanedDate(new Date(article.published_date)),
@@ -20,6 +20,7 @@ export const cleanArticles = (data: any) => {
         id: index
       }
     })
+
   }
 
   const getCleanedDate = (date: Date) => {

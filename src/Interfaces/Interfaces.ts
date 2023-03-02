@@ -25,7 +25,7 @@ export interface rawData {
     subtype?: string;
     caption?: string;
     copyright?: string
-  }[];
+  }[] | null;
   short_url?: string;
 }
 

@@ -3,10 +3,15 @@ import {cleanThumbnail} from '../../Interfaces/Interfaces'
 import Article from '../Article/Article'
 
 
-const ArticleSection = ({ thumbnails, section } : {thumbnails: cleanThumbnail[], section: string}) => {
+const ArticleSection = ({ thumbnails, section, getDetails } : {
+  thumbnails: cleanThumbnail[], 
+  section: string, 
+  getDetails: (id:number)=> void
+}) => {
   const sectionList = thumbnails.map((article: cleanThumbnail) => {
     return <Article 
       thumbnail={article}
+      getDetails={getDetails}
     />
   })
   return(
