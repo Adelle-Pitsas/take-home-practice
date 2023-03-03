@@ -17,6 +17,11 @@ const Details = ({ details } : {details: cleanedArticle | undefined}) => {
           <p>Updated on: {details?.updatedData || "N/A"}</p>
           <Link to={details?.url || '/*'}>Read the full article</Link>
         </div>
+        <div className="button-container">
+          <Link to='/'>
+            <button className="home-btn">Go back</button>
+          </Link>
+        </div>
       </div>
     </div>
   )

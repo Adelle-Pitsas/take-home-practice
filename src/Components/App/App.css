@@ -2,7 +2,7 @@
   text-align: center;
   height: auto;
   width: 100vw;
-  
+  font-family: 'Libre Baskerville', serif;
   /* margin-top: 10vh; */
 }
 
@@ -26,7 +26,7 @@ header {
 }
 
 .title {
-  left: calc(50% - 200px);
+  left: calc(50% - 250px);
   position: absolute;
 }
 
@@ -34,4 +34,25 @@ input {
   margin-left: 5%;
   margin-right: 3%;
   width: 200px
+}
+
+@media screen and (max-width: 1050px) {
+  header {
+    flex-direction: column;
+    height: fit-content;
+    justify-content: space-around;
+    padding-top: .5%;
+    padding-bottom: 1%;
+  }
+
+  .title  {
+    position: relative;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 25px;
+  }
 }
