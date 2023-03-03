@@ -91,11 +91,11 @@ function App() {
     <div className="App" style={{backgroundImage: `url()${background}`}}>
       <header>
         <h1 className='title'>New York Times: World News</h1>
-        <input 
+        {!details && <input 
             placeholder='Search an article by name'
             value={search}
             onChange={(event) => handleChange(event)}
-          />
+          />}
       </header>
       <Routes>
         <Route path='/' element={<ArticleContainer thumbnails={thumbnails} getDetails={getDetails}/>}/>
