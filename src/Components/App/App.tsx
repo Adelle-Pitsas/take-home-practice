@@ -5,6 +5,7 @@ import { Routes, Route, useNavigate, useLocation } from 'react-router-dom'
 import Details from "../Details/Details"
 import ArticleContainer from "../ArticleContainer/ArticleContainer"
 import { cleanedArticle, cleanThumbnail } from '../../Interfaces/Interfaces';
+import PageNotFound from '../PageNotFound/PageNotFound'
 import './App.css';
 import background from '../../Images/background.png'
 
@@ -98,7 +99,8 @@ function App() {
       </header>
       <Routes>
         <Route path='/' element={<ArticleContainer thumbnails={thumbnails} getDetails={getDetails}/>}/>
-        <Route path='/:id' element={<Details details={details}/> } />
+        <Route path='/:id' element={details ? <Details details={details}/>: <PageNotFound />} />
+        <Route path='*' element={<PageNotFound />}/>
       </Routes>
     </div>
   );
