@@ -22,6 +22,7 @@
   height: 100vh;
   display: flex;
   justify-content: center;
+  background-color: rgba(255, 255, 255, 0.462);
 }
 
 .details-info {
@@ -36,4 +37,22 @@
 
 .article-byline {
   font-size: 20px
+}
+
+.button-container {
+  height: 100%;
+}
+
+.home-btn {
+  margin-top: 20%;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.home-btn:hover {
+  transform: scale(1.1);
+  transition: all 0.25s;
+  filter: brightness(1.5);
 }
