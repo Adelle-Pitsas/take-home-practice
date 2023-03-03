@@ -56,3 +56,30 @@
   transition: all 0.25s;
   filter: brightness(1.5);
 }
+
+@media screen and (max-width: 1050px) {
+  .details-container {
+    flex-direction: column;
+    height: fit-content;
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+
+  .article-title {
+    font-size: 18px;
+  }
+
+  .article-byline {
+    font-size: 14px
+  }
+  
+  .details-p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .details-container {
+    margin-top: 15vh;
+  }
+}
