@@ -9,6 +9,13 @@
   cursor: pointer;
   background-color: white;
   margin: 2%;
+  border-radius: 5px;
+}
+
+.article:hover {
+  transform: scale(1.05);
+  transition: all 0.25s;
+  background-color: rgb(223, 223, 223);
 }
 
 .thumbnail-img {
