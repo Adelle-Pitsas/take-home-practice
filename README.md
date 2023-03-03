@@ -1,46 +1,29 @@
-# Getting Started with Create React App
+<h1 align="center"> New York Times Reader </h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="center">Popular World News at your fingertips<h3>
 
-## Available Scripts
+## About the project
+A mobile news site allows users to browse top New York Times articles by section, click on an aricle for more details, and search and article by name.
 
-In the project directory, you can run:
+### Technologies used:
+- TypeScript
+- React
+- Router
+- [NYT's Top Stories API](https://developer.nytimes.com/docs/top-stories-product/1/overview)
 
-### `npm start`
+### The App
+[New Recording - 3_3_2023, 11_44_47 AM.webm](https://user-images.githubusercontent.com/108096652/222778218-2988c866-601d-4b7b-ad79-84141c6303b8.webm)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Planning
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Component Map
 
-### `npm test`
+<img width="811" alt="Screen Shot 2023-03-03 at 11 57 22 AM" src="https://user-images.githubusercontent.com/108096652/222780721-79e405a6-06c5-41d0-920b-17d85c0d3f66.png">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### WireFrame:
+<img width="984" alt="Screen Shot 2023-03-03 at 12 07 03 PM" src="https://user-images.githubusercontent.com/108096652/222783201-0f29dfe7-6d08-4071-9bbf-3abdf3d9af10.png">
 
-### `npm run build`
+<img width="851" alt="Screen Shot 2023-03-03 at 12 07 22 PM" src="https://user-images.githubusercontent.com/108096652/222783215-621a4838-08e8-4544-9d26-4f8ce44c081c.png">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## About the Contributer
+Adelle Pitsas - [LinkedIn](https://www.linkedin.com/in/adelle-pitsas-461503183/) - [GitHub](https://github.com/Adelle-Pitsas)
