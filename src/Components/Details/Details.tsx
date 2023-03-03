@@ -12,9 +12,9 @@ const Details = ({ details } : {details: cleanedArticle | undefined}) => {
         <div className="details-info">
           <h3 className="article-title">{details?.title}</h3>
           <h4 className="article-byline">{details?.byline}</h4>
-          <p>{details?.abstract}</p>
-          <p>Published: {details?.publishedDate}</p>
-          <p>Updated on: {details?.updatedData || "N/A"}</p>
+          <p className="details-p">{details?.abstract}</p>
+          <p className="details-p">Published: {details?.publishedDate}</p>
+          <p className="details-p">Updated on: {details?.updatedData || "N/A"}</p>
           <Link to={details?.url || '/*'}>Read the full article</Link>
         </div>
         <div className="button-container">
