@@ -6,6 +6,7 @@ import Details from "../Details/Details"
 import ArticleContainer from "../ArticleContainer/ArticleContainer"
 import { cleanedArticle, cleanThumbnail } from '../../Interfaces/Interfaces';
 import PageNotFound from '../PageNotFound/PageNotFound'
+import ServerError from '../ServerError/ServerError'
 import './App.css';
 import background from '../../Images/background.png'
 
@@ -19,6 +20,7 @@ function App() {
   const [thumbnails, setThumbnails] = useState<cleanThumbnail[]>([])
   const [details, setDetails] = useState<cleanedArticle>()
   const [ search, setSearch ] = useState<string>("")
+  const [ error, setError ] = useState<boolean>(false)
 
 
   useEffect(() => {
@@ -26,6 +28,10 @@ function App() {
     .then(data => {
       const cleaned = cleanArticles(data)
       setAllArticles(cleanArticles(data))
+    })
+    .catch(error => {
+      console.log(error)
+      setError(true)
     })
   }, [])
 
@@ -86,17 +92,21 @@ function App() {
     }
   }, [search])
 
+  const closeError = () => {
+    setError(false)
+  }
 
   return (
     <div className="App" style={{backgroundImage: `url()${background}`}}>
       <header>
         <h1 className='title'>New York Times: World News</h1>
-        {!details && <input 
+        {location.pathname === '/' && <input 
             placeholder='Search an article by name'
             value={search}
             onChange={(event) => handleChange(event)}
           />}
       </header>
+      {error && <ServerError closeError={closeError}/>}
       <Routes>
         <Route path='/' element={<ArticleContainer thumbnails={thumbnails} getDetails={getDetails}/>}/>
         <Route path='/:id' element={details ? <Details details={details}/>: <PageNotFound />} />
